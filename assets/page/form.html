@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Form</title>
+      <!-- favicon -->
+      <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+      <!-- style css saya -->
+      <link rel="stylesheet" href="../css/style.css" />
+      <!-- ICON FOTN AWESOME -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+   <body>
+      <nav>
+         <img height="70" src="../img/logo.png" alt="logo" />
+         <div class="menu-icon" id="menu-icon">
+            <i class="fa-solid fa-bars" style="color: #ff0000"></i>
+         </div>
+         <ul id="menu-list" class="hidden">
+         <ul>
+            <li>
+               <a href="../../index.html">Home</a>
+            </li>
+            <li>
+               <a href="form.html">Form Pendaftaran</a>
+            </li>
+            <li>
+               <a href="jsdasar.html">Halaman JS Dasar</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="container">
+         <h1 class="title-home">Form</h1>
+         <form action="" style="margin-top: 20px">
+            <div class="input-group">
+               <div class="input-form">
+                  <label for="nama">Nama :</label>
+                  <input type="text" name="nama" id="nama" placeholder="Nama Lengkap" />
+               </div>
+
+               <div class="input-form">
+                  <label for="email">Email :</label>
+                  <input type="email" name="email" id="email" placeholder="Email aktif" />
+               </div>
+            </div>
+
+            <div class="input-group">
+               <div class="input-form">
+                  <label for="no_hp">No Hp :</label>
+                  <input type="no_hp" name="no_hp" id="no_hp" placeholder="No HP aktif" />
+               </div>
+               <div class="input-form">
+                  <p>Jenis Kelamin</p>
+                  <div class="radio-group">
+                     <input type="radio" name="jk" id="laki-laki" value="laki-laki" /> <label for="laki-laki" class="radio-label">Laki-laki</label><br><input type="radio" name="jk" id="perempuan" value="perempuan" />
+                     <label for="perempuan" class="radio-label">Perempuan</label>
+                  </div>
+               </div>
+            </div>
+
+            <div class="input-group">
+               <div class="input-form">
+                  <label for="prodi">Prodi :</label>
+                  <select name="prodi" id="prodi">
+                     <option disabled selected hidden>Pilih</option>
+                     <option value="teknik informatika">Teknik Informatika</option>
+                     <option value="teknik mesin">Teknik Mesin</option>
+                     <option value="teknik industri">Teknik Industri</option>
+                     <option value="sistem informasi">Sistem Informasi</option>
+                  </select>
+               </div>
+               <div class="input-form">
+                  <label for="fotoDiri">Foto Diri :</label><br />
+                  <input type="file" name="fotoDiri" id="fotoDiri" /><br />
+               </div>
+            </div>
+
+            <div class="input-group">
+               <div class="input-form">
+                  <label for="alamat">Alamat :</label><br />
+                  <textarea name="alamat" id="alamat" cols="30" rows="5"></textarea><br />
+               </div>
+               <div class="input-form">
+                  <p>Hobi</p>
+                  <div class="checkbox-group">
+                     <input type="checkbox" name="membaca" id="membaca" /> <label class="checkbox-label" for="membaca">Membaca</label><br />
+                     <input type="checkbox" name="mancing" id="mancing" /> <label class="checkbox-label" for="mancing">Mancing</label><br />
+                     <input type="checkbox" name="mendaki" id="mendaki" /> <label class="checkbox-label" for="mendaki">Mendaki</label><br />
+                     <input type="checkbox" name="olahraga" id="olahraga" /> <label class="checkbox-label" for="olahraga">Olahraga</label><br />
+                  </div>
+               </div>
+            </div>
+
+            <button type="reset" class="btn-reset">Reset</button>
+            <button type="submit" class="btn-daftar">Daftar</button>
+         </form>
+      </div>
+      <footer>
+         <h3>By : Alif Dhaifullah Ramadhan</h3>
+      </footer>
+      <script>
+         // Responsive Nav
+         const menuIcon = document.getElementById("menu-icon");
+         const menuList = document.getElementById("menu-list");
+
+         menuIcon.addEventListener("click", () => {
+            menuList.classList.toggle("hidden");
+         });
+      </script>
+   </body>
+</html>
