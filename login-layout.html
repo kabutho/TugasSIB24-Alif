@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Bootstrap</title>
+
+    <!-- Eksternal CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Icons - Boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        @media only screen and (max-width: 768px) {            
+            .left-konten {
+                height: 75px;
+                margin: 10px 0px 20px;
+                overflow: hidden;
+            }
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row border rounded-5 m-2 p-3 bg-white shadow w-80">
+            <div class="col-md-6 d-flex justify-content-center align-items-center flex-column left-konten">
+                <img src="assets/img/logos.jpeg" class="img-fluid rounded" style="width: 250px;">
+            </div>
+            <div class="col-md-6">
+                <div class="header-text mb-4">
+                    <h3 class="text-center"> Login </h3>
+                    <hr>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class='bx bxs-key'></i></span>
+                    <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3 d-flex justify-content-between align-items-center">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="formCheck">
+                        <label for="formCheck" class="form-check-label text-secondary"> Remember Me </label>
+                    </div>
+                    <div class="forgot">
+                        <small> <a href="#">Forgot Password?</a> </small>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <button class="btn btn-lg btn-primary w-100 fs-6"> Login </button>
+                </div>
+                <div class="row">
+                    <small> Dont' have account? <a href="#"> Sign Up </a> </s mall>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Eksternal JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Box Icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

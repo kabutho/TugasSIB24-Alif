@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Javascript Dasar</title>
+      <!-- favicon -->
+      <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
+      <!-- style css saya -->
+      <link rel="stylesheet" href="../css/style.css" />
+      <!-- ICON FOTN AWESOME -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+   </head>
+   <body>
+      <nav>
+         <img height="70" src="../img/logo.png" alt="logo" />
+         <div class="menu-icon" id="menu-icon">
+            <i class="fa-solid fa-bars" style="color: #07c707"></i>
+         </div>
+         <ul id="menu-list" class="hidden">
+         <ul>
+            <li>
+               <a href="../../index.html">Home</a>
+            </li>
+            <li>
+               <a href="form.html">Form Pendaftaran</a>
+            </li>
+            <li>
+               <a href="jsdasar.html">Halaman JS Dasar</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="container">
+         <h1 id="sapaan">Selamat datang, Orang asing!</h1>
+         <h2 class="js-subtitle">Halaman Javascript Dasar</h2>
+
+         <div class="line" style="width: 100%; height: 2px; margin: 40px 0; background-color: #07c707"></div>
+
+         <div class="materi-js mt-2" >
+            <div class="pencak-silat">
+               <h3 style="background-color: #07c707; color: white; width: fit-content;padding: 5px 40px;border-radius: 10px 0 10px 0;">Pencak Silat</h3>
+               <ul class="mt-2">
+                  <li>Pencak Silat adalah seni bela diri tradisional yang berasal dari Indonesia.</li>
+                  <li>Pencak Silat tidak hanya mengajarkan keterampilan fisik, tetapi juga nilai-nilai moral, budaya, dan spiritual.</li>
+                  <li>Itu diwariskan dari generasi ke generasi dan dimainkan dalam berbagai konteks, termasuk kompetisi, pertunjukan seni, dan latihan fisik.</li>
+               </ul>
+            </div>
+            <div class="jokotole">
+               <h3 style="background-color: #07c707; color: white; width: fit-content;padding: 5px 40px;border-radius: 10px 0 10px 0;">Perguruan Pencak Silat Jokotole </h3>
+               <ul class="mt-2">
+                  <li>PPS Jokotole atau Perguruan Pencak Silat Jokotole didirikan pada tanggal 21 maret 1976 Oleh Bapak Alm Suhaimi Bin Salam.</li>
+                  <li>Perguruan Pencsak silat ini juga memiliki berbagai macam cabang dari nasional maupun internasional.</li>
+                  <li>Dan Perguruan Pencak Silat ini juga melahirkan berbagai atlet atlet berprestasi dari berbagai macam jenjang seperti nasional dan internasional.</li>
+               </ul>
+            </div>
+            <div class="operator">
+               <h3 style="background-color: red; color: white; width: fit-content;padding: 5px 40px;border-radius: 10px 0 10px 0;">Operator Aritmatika</h3>
+               <p class="mt-2">Operator adalah simbol yang digunakan untuk melakukan operasi pada sebuah operand</p>
+               <table class="table-operand mt-1">
+                  <thead>
+                     <tr>
+                        <th>Nama Operator</th>
+                        <th>Simbol</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td>Penjumlahan</td>
+                        <td>+</td>
+                     </tr>
+                     <tr>
+                        <td>Pengurangan</td>
+                        <td>-</td>
+                     </tr>
+                     <tr>
+                        <td>Perkalian</td>
+                        <td>*</td>
+                     </tr>
+                     <tr>
+                        <td>Pembagian</td>
+                        <td>/</td>
+                     </tr>
+                     <tr>
+                        <td>Perpangkatan</td>
+                        <td>**</td>
+                     </tr>
+                     <tr>
+                        <td>Modulus/sisa bagi</td>
+                        <td>%</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <div class="input-form mt-2">
+                  <label for="" class="">Coba Operasi Aritmatika : </label>
+                  <input type="text" id="angka1" class="mt-1" placeholder="Masukkan angka pertama..." /><br />
+                  <select name="operand" class="mt-1" id="operand">
+                     <option value="+">+</option>
+                     <option value="-">-</option>
+                     <option value="*">*</option>
+                     <option value="/">/</option>
+                     <option value="**">**</option>
+                     <option value="%">%</option>
+                  </select>
+                  <input type="text" id="angka2" class="mt-1" placeholder="Masukkan angka kedua..." />
+                  <button class="btn-daftar mt-1" id="operasikan">Operasikan</button>
+                  <h4 class="mt-1" id="hasilOperasi">Hasil :</h4>
+               </div>
+            </div>
+         </div>
+      <footer>
+         <h3>By : Alif Dhaifullah Ramadhan</h3>
+      </footer>
+      <script>
+         // SAPAAN
+         alert("Selamat datang di website sederhana jokotole kodim 0829");
+         const nama = prompt("Kalau boleh tahu, siapa nama kamu?");
+         const sapaan = document.getElementById("sapaan");
+         sapaan.innerHTML = `Selamat datang, ${nama ? `${nama[0].toUpperCase() + nama.slice(1).toLowerCase()}!` : `Orang asing!`}`;
+
+
+         // OPERASI ARITMATIKA
+         document.getElementById("operasikan").addEventListener("click", function () {
+            let angka1 = parseFloat(document.getElementById("angka1").value);
+            let angka2 = parseFloat(document.getElementById("angka2").value);
+            let operand = document.getElementById("operand").value;
+            let hasilOperasi;
+
+            switch (operand) {
+               case "+":
+                  hasilOperasi = angka1 + angka2;
+                  break;
+               case "-":
+                  hasilOperasi = angka1 - angka2;
+                  break;
+               case "*":
+                  hasilOperasi = angka1 * angka2;
+                  break;
+               case "/":
+                  hasilOperasi = angka1 / angka2;
+                  break;
+               case "**":
+                  hasilOperasi = Math.pow(angka1, angka2);
+                  break;
+               case "%":
+                  hasilOperasi = angka1 % angka2;
+                  break;
+               default:
+                  hasilOperasi = "Tidak valid";
+            }
+            if (isNaN(hasilOperasi)) {
+               document.getElementById("hasilOperasi").textContent = `Hasil : ${angka1} ${operand} ${angka2} = Tidak dapat dioperasikan. Operand Harus Angka`;
+            }else{
+               document.getElementById("hasilOperasi").textContent = `Hasil : ${angka1} ${operand} ${angka2} = ${hasilOperasi}`;
+            }
+         });
+
+         // Responsive Nav
+         const menuIcon = document.getElementById("menu-icon");
+         const menuList = document.getElementById("menu-list");
+
+         menuIcon.addEventListener("click", () => {
+            menuList.classList.toggle("hidden");
+         });
+                  
+      </script>
+   </body>
+</html>
